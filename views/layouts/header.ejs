@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blooo!</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <section class="section is-fullheight">
+        <div class="container is-max-desktop">
+            <!-- navbar -->
+            <nav class="navbar mb-5" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img class="logo" src="../images/logo.svg">
+                    </a>
+
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                    </div>
+
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-info" data-target="modal" area-haspopup="true"
+                                    onclick="openModal()">
+                                    <strong>Create</strong>
+                                </a>
+                                <div class="modal" id="modal">
+                                    <div class="modal-background" id="modal-background" onclick="closeModal()"></div>
+                                    <div class="modal-content">
+                                        <div class="box">
+                                            <form class="form" action="/" method="post">
+                                                <div class="field">
+                                                    <label class="label">Title</label>
+                                                    <div class="control">
+                                                        <input class="input is-info" type="text" name="title"
+                                                            placeholder="Nice heading for the blog">
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <label class="label">Blog Content</label>
+                                                    <div class="control">
+                                                        <textarea class="textarea is-info" name="body"
+                                                            placeholder="Enter text for Blog item"></textarea>
+                                                    </div>
+                                                </div>
+                                                <input type="submit" class="button is-info" value="Add Blog Item">
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <button class="modal-close is-large" aria-label="close"
+                                        onclick="closeModal()"></button>
+                                </div>
+                                <!-- <a class="button is-light">
+                                    Log in
+                                </a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar -->
+        </div>

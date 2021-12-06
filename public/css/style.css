@@ -1,5 +1,16 @@
-svg {
+svg:not(.logo) {
   width: 22px;
   top: 5px;
   position: relative;
+}
+.logo {
+  width: 150px;
+  height: 50px;
+}
+.navbar-item img {
+  max-height: 5em !important;
+}
+.content h1 {
+  color: #0c4676;
+  font-weight: 700;
 }
