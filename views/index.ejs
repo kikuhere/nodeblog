@@ -1,20 +1,20 @@
 <%- include("layouts/header.ejs") -%>
 
 <div class="container is-max-desktop">
-    <div class="content my-6">
+    <div class="content my-5">
         <h1 class="title has-text-centered">Today's Blogs</h1>
     </div>
     <div class="columns is-multiline">
         <% allblogs.map(blog=>{ %>
 
-        <div class="column is-one-third">
+        <div class="column is-half">
             <div class="box">
                 <div class="content">
-                    <a href="blog/<%= blog.key %> ">
+                    <a href="blog/<%= blog.title %> ">
                         <h3 class="has-text-info"><%= blog.title %></h3>
                     </a>
-                    <p><%= blog.body.substr(0, 100) %>...</p>
-                    <a href="blog/<%= blog.key %> " class="button">Read More</a>
+                    <p><%= blog.body.substr(0, 100) %> ...</p>
+                    <a href="blog/<%= blog.title %> " class="button">Read More</a>
                 </div>
             </div>
         </div>
